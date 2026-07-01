@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # cluaerAI FPS Predictor
 
 Python desktop app for continuous, local screen capture and FPS situation prediction.
