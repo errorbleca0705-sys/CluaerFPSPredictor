@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # cluaerAI FPS Predictor
 
 Python desktop app for continuous, local screen capture and FPS situation prediction.
@@ -98,3 +99,6 @@ Not supported:
 - Aimbot, recoil macro, triggerbot, or auto movement
 - Enemy position overlay from hidden information
 - Any automation that plays the game for you
+=======
+# CluaerFPSPredictor
+>>>>>>> 2386ef44bcfe27fa58409ed32ed2271d053f70b0
