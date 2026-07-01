@@ -1,0 +1,19 @@
+path: ../datasets/fps_public_frames
+train: images/train
+val: images/val
+test: images/test
+
+names:
+  0: enemy
+  1: ally
+  2: spike
+  3: smoke
+  4: flash
+  5: knocked
+  6: vehicle
+  7: cover
+  8: weapon
+  9: health_bar
+  10: ammo_counter
+  11: minimap
+  12: kill_feed

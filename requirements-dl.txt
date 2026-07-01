@@ -1,0 +1,7 @@
+# Optional deep-learning backends.
+# Install this only if you want to load YOLO models through Ultralytics.
+ultralytics>=8.3.0
+
+# Optional ONNX Runtime backend for custom models. The app also supports
+# OpenCV DNN ONNX loading from opencv-python without this package.
+onnxruntime>=1.18.0

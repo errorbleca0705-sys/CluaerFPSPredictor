@@ -1,0 +1,13 @@
+{
+  "capture_fps": 8,
+  "analysis_fps": 2,
+  "monitor_index": 1,
+  "preview_width": 720,
+  "situation_model_path": "models/fps_situation_model.json",
+  "model_backend": "auto",
+  "model_path": "",
+  "labels_path": "models/labels.txt",
+  "detection_confidence": 0.35,
+  "auto_log_interval_sec": 10,
+  "data_path": "data/predictions.jsonl"
+}

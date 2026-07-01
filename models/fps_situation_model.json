@@ -1,0 +1,95 @@
+{
+  "model_name": "cluaerAI FPS baseline situation model",
+  "model_type": "visible_screen_heuristic_v1",
+  "version": 1,
+  "description": "A local baseline prediction model that scores only visible screen signals and user-provided match context. It does not use memory reading, packet data, anti-cheat bypasses, or hidden enemy information.",
+  "safety_boundary": {
+    "allowed_inputs": [
+      "user screen capture",
+      "user-entered health/ammo/team/time context",
+      "legitimate screenshots",
+      "public VOD frames",
+      "post-match feedback"
+    ],
+    "blocked_inputs": [
+      "game memory",
+      "network packets",
+      "anti-cheat bypass output",
+      "hidden enemy coordinates",
+      "automation or aim-control signals"
+    ]
+  },
+  "advantage": {
+    "base_score": 50,
+    "health_center": 50,
+    "health_scale": 0.25,
+    "team_delta_weight": 8,
+    "ammo_low_threshold": 5,
+    "ammo_low_penalty": -10,
+    "ammo_ready_threshold": 20,
+    "ammo_ready_bonus": 4,
+    "utility_each_bonus": 2,
+    "utility_bonus_cap": 8,
+    "visible_hostile_penalty_each": -5,
+    "visible_hostile_penalty_cap": -15,
+    "red_flash_threshold": 0.08,
+    "red_flash_penalty": -12,
+    "whiteout_threshold": 0.25,
+    "whiteout_penalty": -15,
+    "smoke_threshold": 0.55,
+    "smoke_penalty": -6,
+    "center_edge_threshold": 0.13,
+    "center_edge_bonus": 3,
+    "motion_threshold": 0.12,
+    "motion_penalty": -5,
+    "min_score": 5,
+    "max_score": 95
+  },
+  "confidence": {
+    "base": 35,
+    "known_field_bonus": 4,
+    "detector_bonus": 10,
+    "visible_actor_bonus": 8,
+    "visual_signal_bonus": 5,
+    "min": 20,
+    "max": 90
+  },
+  "probabilities": {
+    "valorant": {
+      "win_min": 8,
+      "win_max": 92,
+      "fight_loss_base": 100,
+      "fight_loss_visible_hostile_bonus": 8,
+      "fight_loss_min": 5,
+      "fight_loss_max": 88,
+      "info_gain_base": 38,
+      "info_gain_utility_bonus": 5,
+      "info_gain_min": 10,
+      "info_gain_max": 75
+    },
+    "pubg": {
+      "survive_offset": 5,
+      "survive_min": 8,
+      "survive_max": 94,
+      "spotted_base": 55,
+      "spotted_motion_scale": 60,
+      "spotted_min": 8,
+      "spotted_max": 85,
+      "rotate_offset": -5,
+      "rotate_min": 10,
+      "rotate_max": 88
+    },
+    "generic": {
+      "win_min": 8,
+      "win_max": 92,
+      "survive_offset": 3,
+      "survive_min": 8,
+      "survive_max": 94,
+      "reposition_base": 45,
+      "reposition_utility_bonus": 4,
+      "reposition_motion_scale": -20,
+      "reposition_min": 8,
+      "reposition_max": 85
+    }
+  }
+}
